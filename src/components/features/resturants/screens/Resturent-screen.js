@@ -3,7 +3,8 @@
 import {StyleSheet, View, SafeAreaView, StatusBar} from 'react-native';
 import SearchBar from '../../../Search/Search';
 import {ResturentInfo} from '../components/Resturent-Info';
-import {Colors} from '../../../../utils/color';
+import {space} from '../../../../theme/spacings';
+import {colors} from '../../../../theme/colors';
 
 export default function ResturentScreen() {
   return (
@@ -25,14 +26,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     // marginTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
-    backgroundColor: Colors.BackGroundColor,
+    backgroundColor: colors.bg.secondary,
   },
   search: {
-    padding: 12,
+    padding: space.md,
+    margin: space.sm,
+    backgroundColor: colors.bg.secondary,
   },
   list: {
     flex: 1,
     padding: 15,
-    backgroundColor: 'orange',
+    backgroundColor: colors.bg.secondary,
   },
 });
